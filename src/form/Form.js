@@ -41,7 +41,7 @@ const courseCategory = [
   }
 ];
 
-const form = props => {
+const form = (props) => {
   const {
     classes,
     values,
@@ -60,73 +60,6 @@ const form = props => {
         <Card className={classes.card}>
           <CardContent>
             <TextField
-              id="website"
-              label="Website"
-              value={values.website}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.website ? errors.website : ""}
-              error={touched.website && Boolean(errors.website)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="name"
-              label="First Name"
-              value={values.name}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.name ? errors.name : ""}
-              error={touched.name && Boolean(errors.name)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="surname"
-              label="Last Name"
-              value={values.surname}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.surname ? errors.surname : ""}
-              error={touched.surname && Boolean(errors.surname)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="email"
-              label="Email"
-              type="email"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.email ? errors.email : ""}
-              error={touched.email && Boolean(errors.email)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              select
-              id="course"
-              label="Course Category"
-              value={values.course}
-              onChange={handleChange("course")}
-              helperText={touched.course ? errors.course : ""}
-              error={touched.course && Boolean(errors.course)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            >
-              {courseCategory.map(option => (
-                <MenuItem key={option.value} value={option.value}>
-                  {option.label}
-                </MenuItem>
-              ))}
-            </TextField>
-            <TextField
               id="password"
               label="Password"
               type="password"
@@ -135,19 +68,6 @@ const form = props => {
               onBlur={handleBlur}
               helperText={touched.password ? errors.password : ""}
               error={touched.password && Boolean(errors.password)}
-              margin="dense"
-              variant="outlined"
-              fullWidth
-            />
-            <TextField
-              id="confirmPassword"
-              label="Confirm Password"
-              type="password"
-              value={values.confirmPassword}
-              onChange={handleChange}
-              onBlur={handleBlur}
-              helperText={touched.confirmPassword ? errors.confirmPassword : ""}
-              error={touched.confirmPassword && Boolean(errors.confirmPassword)}
               margin="dense"
               variant="outlined"
               fullWidth
